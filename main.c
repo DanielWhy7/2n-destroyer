@@ -1,16 +1,21 @@
-// 2N-DESTROYER
 #include <stdio.h>
 #include <math.h>
 //#include <random.h>
 
 const char VERSION[]="0.1.0";
-const char DLINE[]="_______________________________";
+
+char dline[]="_______________________________";
 
 int main(){
-  printf("\n2N-DESTROYER | Version: %s\n%s\n",VERSION,DLINE);
+  printf("\n2N-DESTROYER | Version: %s\n%s\n",VERSION,dline);
 
   while(1){
-    for(unsigned short int i=0;i<11;i++){
+    short int minimal,maximal;
+    printf("Enter minimum: ");
+    scanf("%d",&minimal);
+    printf("Enter maximal: ");
+    scanf("%d",&maximal);
+    for(unsigned short int i=minimal;i<maximal+1;i++){
       int input;int answer=(int)pow(2,i);
       printf("Enter 2^%d: ",i);
 
